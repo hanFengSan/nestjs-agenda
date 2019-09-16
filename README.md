@@ -1,5 +1,5 @@
 # nestjs-agenda
-[Agenda](https://github.com/agenda/agenda) module for (Nestjs)[https://github.com/nestjs/nest]
+[Agenda](https://github.com/agenda/agenda) module for [Nestjs](https://github.com/nestjs/nest)
 
 # Installation
 ```

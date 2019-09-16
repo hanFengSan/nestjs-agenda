@@ -7,9 +7,10 @@ npm install nestjs-agenda
 ```
 
 # Usage
-Import `AgendaModule`:
-**Sync register**:
-```
+**1. Import `AgendaModule`:**
+
+*Sync register*:
+```TypeScript
 import { AgendaModule } from 'nestjs-agenda';
 
 @Module({
@@ -18,8 +19,8 @@ import { AgendaModule } from 'nestjs-agenda';
 })
 export class FooModule {}
 ```
-**Async register**:
-```
+*Async register*:
+```TypeScript
 import { AgendaModule } from 'nestjs-agenda';
 
 @Module({
@@ -36,8 +37,8 @@ import { AgendaModule } from 'nestjs-agenda';
 })
 export class FooModule {}
 ```
-Inject `AgendaService` (AgendaService is a instance of Agenda):
-```
+**2. Inject `AgendaService` (AgendaService is a instance of Agenda):**
+```TypeScript
 @Injectable()
 export class FooService {
   construct(private readonly agenda: AgendaService) {

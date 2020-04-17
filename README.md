@@ -1,6 +1,8 @@
 # nestjs-agenda
 [Agenda](https://github.com/agenda/agenda) module for [Nestjs](https://github.com/nestjs/nest)
 
+Agenda version is `^3.1.0`
+
 # Installation
 ```
 npm install nestjs-agenda
@@ -39,9 +41,12 @@ export class FooModule {}
 ```
 **2. Inject `AgendaService` (AgendaService is a instance of Agenda):**
 ```TypeScript
+import { Injectable } from '@nestjs/common';
+import { AgendaService } from 'nestjs-agenda';
+
 @Injectable()
 export class FooService {
-  construct(private readonly agenda: AgendaService) {
+  constructor(private readonly agenda: AgendaService) {
     // define a job, more details: [Agenda documentation](https://github.com/agenda/agenda)
     this.agenda.define('TEST_JOB', { lockLifetime: 10000 }, this.testJob.bind(this));
     // schedule a job

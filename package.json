@@ -1,6 +1,6 @@
 {
   "name": "nestjs-agenda",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "agenda for nest.js",
   "main": "dist/index.js",
   "scripts": {

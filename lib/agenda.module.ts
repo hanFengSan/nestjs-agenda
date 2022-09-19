@@ -26,6 +26,7 @@ export class AgendaService extends Agenda {}
 export class AgendaModule {
   static register(options: AgendaModuleOptions): DynamicModule {
     return {
+      isGlobal: options.isGlobal,
       module: AgendaModule,
       providers: createAgendaProvider(options),
     };
@@ -33,6 +34,7 @@ export class AgendaModule {
 
   static registerAsync(options: AgendaModuleAsyncOptions): DynamicModule {
     return {
+      isGlobal: options.isGlobal,
       module: AgendaModule,
       imports: options.imports || [],
       providers: this.createAsyncProviders(options),
